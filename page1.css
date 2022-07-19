@@ -1,0 +1,117 @@
+/*style général------------------*/
+
+*{ /*ici l'étoile correspond au sélécteur universel. Les propriétées associées à ce selecteur vont s'appliquer à tous les éléments HTML de ma page*/
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+body{
+    margin: 0;
+    font-family: sans-serif;/*police d"écriture*/
+    background-color: #444444;
+}
+header{
+    display: flex;/*si nous utilisons le flex ici, c'est pour mettre à droite notre logo les liens de notre navigation. Sinon, les liens apparaissent après le logo comme dans l'ordre d'affichage tradionnel du flux HTML*/
+    justify-content: space-between; /*cette propriété du flex permet de mettre de l'espace entre les enfants de la flex box. dans notre cas, il y aura donc un espace entre notre logo et notre navigation*/
+    background: linear-gradient(124deg, rgba(255,255,255,1) 50%, rgba(51,51,51,1) 50%);
+
+}
+.logo{
+    width: 10%;/*pour réduire la taille du lien qui contient notre logo je lui demande de faire 10% de la largeur de son parent, le <header>*/
+}
+.logo img{/*ce sélecteur veut dire: "dans le ou les éléments HTML ayant la class logo, va séléctionner la ou les balises img".*/
+    width: 100%;/*je demande à mon image de mesurer en largeur 100% de la largeur de son parent, le lien <a> avec la class logo. Ceci provoque une réduction de la taille de mon image, car le parent de l'image mesure seulement 10% de la largeur du <header. */
+}
+nav{
+    width: 10%; /*je demande à la navigation qui encadre mes liens de mesurer 10% de la largeur de son parent, le <header>*/
+    display: flex;/*j'active le flex sur la navigation pour pouvoir appliquer des propriétés du flex et changer l'ordre d'apparition de mes liens*/
+    flex-direction: column;/*maintenant que la navigation est en display flex, je peux venir modifier la façon dont mes liens sont positionnés dans le header. Avec la propriété en column ils seront maintenant en colonne et non plus en ligne*/
+    justify-content: center;/*cette propriété me permet de centtrer mes liens de ma <nav>*/
+}
+
+nav a{
+    color: white; /*cette propriété permet de modifier la taille de la police d'écriture de mes liens*/
+    font-size: 20px;/*permet de gérer l'épaisseur du trait de la police d'écriture de mes liens. La définition bold permet e les mettre en gras*/
+    font-weight: bold;/*ce raccourcis englobe les 4 propriétés en même temps: top-right-bottom-left. Si je donne 4 valeurs/ 5px 6px 7px 8px; la machine va appliquer cette valeur en partant du padding top jusqu'au padding left en tournant dans le sens des aiguilles d'une montre.*/
+    padding: 5px 0;/*si je donne à cette propriété 2 valeurs; la machine va appliquer la premiére valeur au padding top + padding bottom, et la deuxiéme valeur au padding right and left
+    
+    si je donne à cette propriété 1 seule valeur; la machine va appliquer cette valeur sur tout les niveaux de padding */
+}
+nav a:hover{ /*le hover indique à la machine quelle doit appliquer les propriétés CSS qui suivent uniquement lorsque l'utilisateur survole les liens avec sa souris*/
+    background-color: orange;
+    color: black;
+    text-align: center;
+    transform: rotate(360deg);/*cet effet d'animation permet de faire tourner le lien sur lui même*/
+    transition: .5s;/*permet de donner un temps dutrant lequel mon animation va s'excuter. L'animation va s'exécuter pendant 0.5 seconde*/
+}
+main{
+    width: 90%;
+    margin: 30px auto;/*on applique 30pixel de margin top +margin bottom pour espacer notre main du header et du footer. la valeur auto ira s'appliquer à la margin right + margin left pour centrer le main dans le body*/
+    box-shadow: 5px 5px 10px;/*cette propriété permet de générer un effer d'ombrage sur notre main. Voir https://developer.mozilla.org/fr/docs/Web/CSS/box-shadow
+    */
+}
+h1{
+    text-align: center;
+    background-color: orange;
+    color: white;
+    margin: 0;
+    height: 70px;/*je déclare manuellement la hauteur du h1 pour le mettre en valeur*/
+    line-height: 70px;/*je fais en sorte que la hauteur du h1 soit égale à la hauteur de mon h1 ce qui permet de centrer le texte sur l'axe vertical*/
+}
+section{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5%;
+}
+.container-card{
+    width: 35%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-color: white;
+}
+h2{
+    margin: 0;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-color: orange;
+    color: white;
+}
+p{
+    padding: 2%;
+}
+.container-card img{
+    width: 100%;/*on applique width à 100% sur notre image. Cela veut dire que l'image aura 100% de la largeur de son parent (et non de votre écran). Comme sont parent est l'élément HTML container-card l'image va parfaitement s'adapter à la largeur de ce container 
+    display: block;/*nous avons changer la nature / le display de l'image pour éviter la petite bande blanche qui apparaît au pied de l'image si je la laisse en display inline qui est sa nature par défaut.*/
+}
+iframe{
+    width: 100%;
+    display:block;
+}
+footer iframe{
+    width: 50%;
+    margin: 0 auto;
+}
+/*Gestion du Parallax*/
+.parallax-1, .parallax-2, .parallax-3{
+    height: 600px;
+    background-attachment: fixed;/*permet de fixer l'image dans la div*/
+    background-position: center;/*permet de centrer mon image dans la div*/
+    background-repeat: no-repeat;/*Si l'image est plus pettie que ma div cette propriété va éviter qu'elle se répète*/
+    background-size: cover;
+}
+.parallax-1{
+    background-image: url(../img/busy-bee.jpg);
+}
+.parallax-2{
+    background-image: url(../img/bridge.jpg);
+}
+.parallax-3{
+    background-image: url(../img/desktop.jpg);
+}
+
+/*style général - Fin -----------*/
