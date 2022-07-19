@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <title>Page 1</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="nom et prenom">
+    <meta name="description" content="description de ma page">
+    <link rel="stylesheet" href="css/page1.css">
+</head>
+<body>
+    <header id="top">
+        <a class="logo" href="accueil.html">
+        <img src="img/Bee Logo.png" title="logo" alt="bee logo">
+        </a>
+    <nav>
+        <a href="#section1">Le flex</a><!--Ancre-->
+        <a href="#section1">Les Images</a>
+        <a href="#section2">Formulaire</a>
+        <a href="#section2">Les listes</a>
+        <a href="#section3">iFrame</a>
+        <a href="#section3">Positions</a>
+        <a href="https://developer.mozilla.org/fr/docs/Learn/CSS/CSS_layout/Responsive_Design
+        ">Le RWD</a><!--Lien externe-->
+    </nav>
+    </header>
+    <main>
+        <h1>HTML5 / CSS3</h1>
+        <div class="parallax-1"></div> <!--La <div> est un autre élément structurant comme la <section>, l'<article>, le <main>...et c'est une balise de type block.-->
+        <section id="section1"> <!--Cette <section> va me servir à organiser mon contenu, et permettra de mettre côte à côte mes container-card grâce au flex.-->
+        <div class="container-card">
+            <a href="#top"> <!--Ici, on transforme notre <h2> en lien dans le but d'en faire une ancre qui nous permettra de remonter vers le menu de notre site.-->
+                <h2>Le Flex</h2>
+            </a>
+            <p>Le flex est une technologie qui permet de gérer le positionnement des éléments structurants ainsi que leur contenu grâce à un système de flex-box.</p>
+            <p>Cette technologie permet également de gérer plus facilement le responsive web design et permet de positionner nos blocks avec une plus grande liberté.</p>
+        </div>
+
+        <div class="container-card">
+            <a href="#top">
+                <h2>Les Images</h2>
+            </a>
+            <p>Les images sont des balises orphelines qui permettent d'afficher notre logo, ainsi que toutes les images qui viendront illustrer notre site.</p>
+            <p>Les images ont un display inline : elles vont se mettre côte à côte sur une même ligne si elles disposent de suffisamment d'espace sur cette ligne. Il ne faut pas les confondre avec les balises de type block qui prennent 100% de la largeur de leur parent, et qui prennet en hauteur la valeur de leur contenu.</p>
+            <p>Un balise img possède trois attributs : la src qui permet d'indiquer le chemin qui mène à l'image, le title qui permet de donner une description de l'image au survol de la souris, et le alt qui permet de donner une description de l'image interprétée par les liseuses numériques.</p>
+            <img src="img/wood logo.jpg" title="wood" alt="wood">
+        </div>
+        </section>
+
+        <div class="parallax-2"></div>
+        <section id="section2">
+            <div class="container-card">
+            <a href="#top">
+                <h2>Les formulaires</h2>
+            </a>
+            <p>Les formulaires permettent aux utilisateurs de notre site de nous envoyer des informations. Grâce à eux, ils peuvent créer des espaces de connexion et transmettre des informations sur notre serveur.</p>
+            <p>Les formulaires sont composés de label et d'input. Le label permet de nommer un input puis guider notre utilisateur lors du remplissage du formulaire.</p>
+            <p>Il existe un grand nombre d'input que vous pouvez retrouver dans la <a href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/Input">documentation</a> </p>
+        </div>
+
+        <div class="container-card">
+            <a href="#top">
+                <h2>Les Listes</h2>
+            </a>
+            <p>Il existe deux types principaux de listes, les listes ordonnées et les listes non ordonnées.</p>
+            <p>Chaque liste est composée de li qui représentent les différents points de notre liste.</p>
+            <ul> <!--unordered list/liste non ordonnée-->
+                <li>Patates</li>
+                <li>Wisky</li>
+                <li>Fayots</li>
+                <li>Lard</li>
+            </ul>
+
+            <ol>
+                <li>9h00 : réunion</li>
+                <li>10h00 : meeting avec marketing</li>
+                <li>12h00 : pause déjeuner</li>
+                <li>16h00 : Point le sprint</li>
+            </ol>
+        </div>
+        </section>
+
+        <div class="parallax-3"></div>
+        <section id="section3">
+
+        <div class="container-card">
+            <a href="#top"><h2>iFrame</h2></a>
+            <p>Les iFrame sont des éléments interactifs que nous pouvons intégrer à nos pages web grâce à des services proposés en ligne.</p>
+            <p>La plus connu est la carte interactive que l'on retrouve sur des nombreux sites web. Elle permet par exemple d'indiquer la position géographique d'une boutique ou d'un lien de vente, ou encore le siège de notre entreprise, ou les locaux d'un établissement de formation.</p>
+            <p>Pour intégrer une carte interactive, nous pouvons aller sur googlemap et utiliser l'option "partager" pour intégrer l'élément à notre site sous format HTML.</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.4563874499877!2d2.3662470159669335!3d48.86857567928847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66de27c6be74b%3A0x272625f25dc0c04!2s2%20Rue%20de%20la%20Fontaine%20au%20Roi%2C%2075011%20Paris!5e0!3m2!1sfr!2sfr!4v1644237275666!5m2!1sfr!2sfr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+
+        <div class="container-card">
+            <a href="#top"><h2>Position</h2></a>
+            <p>Il existe quatres types de positions :</p>
+            <p>La position absolute permet de placer un élément sur notre page sans tenir compte du flux des éléments HTMl. Son positionnement se fait par rapport au bord du viewport de notre navigateur.</p>
+            <p>La position relative fonctionne comme la position absolute sauf que son point de départ sera son emplacement dans le flux. Son emplacement ne sera d'ailleurs pas supprimer lors de son déplacement, il faut donc anticiper son posistionnement pour éviter des problèmes d'apparences.</p>
+            <p>La position fixed permet de fixer un élément sur notre page pour qu'il soit visible même après un scroll. Cette position peut par exemple être appliquer sur une navitation pour qu'elle soit accessible n'importe où sur notre page.</p>
+            <p>La position sticky fonctionne comme la position fixed sauf que l'élément sticky dispraître lorsque son parent disparaître à l'écran.</p>
+        </div>
+            
+    </section>
+    </main>
+    <footer>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.991625693754!2d2.2922926156192416!3d48.85837007928756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e2964e34e2d%3A0x8ddca9ee380ef7e0!2sEiffel%20Tower!5e0!3m2!1sen!2sfr!4v1649254616467!5m2!1sen!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </footer>
+    </body>
+</html>
